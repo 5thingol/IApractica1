@@ -8,7 +8,7 @@ import IA.Desastres.Grupo;
 import IA.Desastres.Grupos;
 
 public class Solucio {
-
+jodeeerrrr
 	public int cost;
 
 	class RecogidaGrupo {
