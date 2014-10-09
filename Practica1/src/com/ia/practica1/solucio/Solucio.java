@@ -8,7 +8,6 @@ import IA.Desastres.Grupo;
 import IA.Desastres.Grupos;
 
 public class Solucio {
-
 	public int cost;
 
 	class Recogida {
@@ -45,7 +44,7 @@ public class Solucio {
 		Recogida recogida = mRecogida.get(helicopter1).get(grupo);
 		mRecogida.get(helicopter2).add(posicion, recogida);
 	}
-
+	
 	public void intercanviar(int helicopter1, int grupo1, int helicopter2,
 			int grupo2) {
 
