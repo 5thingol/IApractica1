@@ -43,7 +43,7 @@ jodeeerrrr
 
 	
 	public void mover(int grupo, int h1, int h2) {
-		holaaaaaaaaaa
+
 	}
 	
 	public void intercanviar(int i1, int j1, int i2, int j2) {
