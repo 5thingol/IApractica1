@@ -11,7 +11,7 @@ public class Solucio {
 
 	public int cost;
 
-	class RecogidaGrupo {
+	class Recogida {
 		public int grup;
 		// TRUE: Anira al centre abans de buscar al grup
 		public boolean sortida;
@@ -20,7 +20,7 @@ public class Solucio {
 	private static Grupos mGrupos;
 	private static Centros mCentros;
 
-	private Vector<ArrayList<RecogidaGrupo>> mRecogida;
+	private Vector<ArrayList<Recogida>> mRecogida;
 
 	public Solucio(Grupos grupos, Centros centros) {
 		mGrupos = grupos;
@@ -29,22 +29,24 @@ public class Solucio {
 		// GENERAR ESTAT INICIAL
 	}
 
-	public Solucio(Vector<ArrayList<RecogidaGrupo>> recogida) {
-		mRecogida = new Vector<ArrayList<RecogidaGrupo>>();
+	public Solucio(Vector<ArrayList<Recogida>> recogida) {
+		mRecogida = new Vector<ArrayList<Recogida>>();
 		for (int i = 0; i < recogida.size(); i++) {
 			mRecogida.add(recogida.get(i));
 		}
 	}
-	
+
 	public int getNombreGrupsHelicopter(int helicopter) {
 		return mRecogida.get(helicopter).size();
 	}
 
-	public void mover(int grupo, int h1, int h2) {
-
+	public void mover(int helicopter1, int grupo, int helicopter2, int posicion) {
+		Recogida recogida = mRecogida.get(helicopter1).get(grupo);
+		mRecogida.get(helicopter2).add(posicion, recogida);
 	}
-	
-	public void intercanviar(int i1, int j1, int i2, int j2) {
-		
+
+	public void intercanviar(int helicopter1, int grupo1, int helicopter2,
+			int grupo2) {
+
 	}
 }
