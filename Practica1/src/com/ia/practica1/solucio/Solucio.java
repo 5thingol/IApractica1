@@ -40,8 +40,10 @@ public class Solucio {
 		return mRecogida.get(helicopter).size();
 	}
 
+	// Mou el grup que recollia l'helicopter 1 en ordre grupo
 	public void mover(int helicopter1, int grupo, int helicopter2, int posicion) {
 		Recogida recogida = mRecogida.get(helicopter1).get(grupo);
+		mRecogida.get(helicopter1).remove(grupo);
 		mRecogida.get(helicopter2).add(posicion, recogida);
 	}
 	
