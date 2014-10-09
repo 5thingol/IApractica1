@@ -1,5 +1,6 @@
 package com.ia.practica1.solucio;
 
+import java.util.ArrayList;
 import java.util.Vector;
 
 import IA.Desastres.Centros;
@@ -8,16 +9,18 @@ import IA.Desastres.Grupos;
 
 public class Solucio {
 
-	class RecojidaGrupo {
-		public Grupo g;
-		public int helicopter;
-		public int ordre;
+	public int cost;
+
+	class RecogidaGrupo {
+		public int grup;
+		// TRUE: Anira al centre abans de buscar al grup
+		public boolean sortida;
 	}
 
 	private static Grupos mGrupos;
 	private static Centros mCentros;
 
-	private RecojidaGrupo[] mRecojida;
+	private Vector<ArrayList<RecogidaGrupo>> mRecogida;
 
 	public Solucio(Grupos grupos, Centros centros) {
 		mGrupos = grupos;
@@ -26,20 +29,22 @@ public class Solucio {
 		// GENERAR ESTAT INICIAL
 	}
 
-	public Solucio(RecojidaGrupo[] recojida) {
-		mRecojida = new RecojidaGrupo[recojida.length];
-		for (int i = 0; i < recojida.length; i++) {
-			mRecojida[i] = recojida[i];
+	public Solucio(Vector<ArrayList<RecogidaGrupo>> recogida) {
+		mRecogida = new Vector<ArrayList<RecogidaGrupo>>();
+		for (int i = 0; i < recogida.size(); i++) {
+			mRecogida.add(recogida.get(i));
 		}
 	}
 	
-	public void mover(int grupo, int h1, int h2) {
-		
+	public int getNombreGrupsHelicopter(int helicopter) {
+		return mRecogida.get(helicopter).size();
 	}
 
-	public void intercanviar(int i0, int j0, int i1, int j1) {
-		Grupo aux = mRecojida.get(i0).get(j0);
-		Grupo aux2 = mRecojida.
-		mRecojida.get(i0).setElementAt(, );
+	public void mover(int grupo, int h1, int h2) {
+
+	}
+	
+	public void intercanviar(int i1, int j1, int i2, int j2) {
+		
 	}
 }
