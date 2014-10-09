@@ -27,6 +27,7 @@ public class Solucio {
 		mCentros = centros;
 
 		// GENERAR ESTAT INICIAL
+		
 	}
 
 	public Solucio(Vector<ArrayList<Recogida>> recogida) {
