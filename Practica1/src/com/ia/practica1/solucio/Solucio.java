@@ -49,6 +49,9 @@ public class Solucio {
 	
 	public void intercanviar(int helicopter1, int grupo1, int helicopter2,
 			int grupo2) {
-
+		Recogida recogida1 = mRecogida.get(helicopter1).get(grupo1);
+		Recogida recogida2 = mRecogida.get(helicopter2).get(grupo2);
+		mRecogida.get(helicopter1).set(grupo1,recogida2);
+		mRecogida.get(helicopter2).set(grupo2,recogida1);
 	}
 }
